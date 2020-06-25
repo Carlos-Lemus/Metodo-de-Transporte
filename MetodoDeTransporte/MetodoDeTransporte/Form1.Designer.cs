@@ -34,12 +34,13 @@
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelTitulo = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.panelContentForm = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -149,15 +150,15 @@
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panel2
+            // panelTitulo
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.labelTitulo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(220, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(664, 70);
-            this.panel2.TabIndex = 2;
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelTitulo.Controls.Add(this.labelTitulo);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(664, 70);
+            this.panelTitulo.TabIndex = 2;
             // 
             // labelTitulo
             // 
@@ -167,25 +168,35 @@
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19);
+            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19, 19, 19, 19);
             this.labelTitulo.Size = new System.Drawing.Size(291, 67);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Metodo de Transporte";
+            // 
+            // panelContentForm
+            // 
+            this.panelContentForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.panelContentForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContentForm.Location = new System.Drawing.Point(220, 70);
+            this.panelContentForm.Name = "panelContentForm";
+            this.panelContentForm.Size = new System.Drawing.Size(664, 451);
+            this.panelContentForm.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 521);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelContentForm);
+            this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
             this.Name = "Form1";
             this.Text = "Metodo de Transporte";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelTitulo.ResumeLayout(false);
+            this.panelTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,9 +207,10 @@
         private FontAwesome.Sharp.IconButton btnInicio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnHome;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Label labelTitulo;
         private FontAwesome.Sharp.IconButton btnSalir;
+        private System.Windows.Forms.Panel panelContentForm;
     }
 }
 

@@ -18,7 +18,7 @@ namespace MetodoDeTransporte
         private IconButton btnActual;
         private Panel borderLeftBtn;
         private Color colorBtn = Color.FromArgb(68, 189, 50);
-
+        private Form formActivo = null;
 
         public Form1()
         {
@@ -31,6 +31,7 @@ namespace MetodoDeTransporte
             borderLeftBtn = new Panel();
             borderLeftBtn.Size = new Size(8, 90);
             panelMenu.Controls.Add(borderLeftBtn);
+
         }
 
         //metodo que cambia las propiedades de los IconButton del panelMenu al activarse
@@ -80,19 +81,49 @@ namespace MetodoDeTransporte
 
         }
 
+        //el metodo abre uno de los formularios de la aplicacion
+        private void abrirForm(Form childForm)
+        {
+            cierraForm(formActivo); //cierro el formulario activo
+
+            //cambio las propiedados del formulario para agregarlo al panelContentForm
+            formActivo = childForm;
+            formActivo.TopLevel = false;
+            formActivo.Dock = DockStyle.Fill;
+            formActivo.FormBorderStyle = FormBorderStyle.None;
+            panelContentForm.Controls.Add(formActivo);
+            panelContentForm.Tag = formActivo;
+            formActivo.BringToFront();
+            formActivo.Show(); //muestro el formulario
+        }
+
+        //el metodo cierra uno de los formularios de la aplicacion
+        private void cierraForm(Form form)
+        {
+            //evaluo que se halla enviado un formulario
+            if (form != null)
+            {
+                form.Close(); //cierro el formulario activado
+            }
+
+        }
+
         private void btnInicio_Click(object sender, EventArgs e)
         {
             activarBtn(sender, colorBtn); //activo el btn para cambiar sus propiedades
+            abrirForm(new InicioForm()); //abro el formulario de resultados
         }
 
         private void btnResultado_Click(object sender, EventArgs e)
         {
             activarBtn(sender, colorBtn); //activo el btn para cambiar sus propiedades
+            abrirForm(new ResultadoForm()); //abro el formulario de inicio
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             desactivarBtn(); //desactivo el boton seleccionado anterios
+            cierraForm(formActivo); //cierro el formulario activo
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
