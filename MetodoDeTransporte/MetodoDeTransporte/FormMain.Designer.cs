@@ -1,6 +1,6 @@
 ﻿namespace MetodoDeTransporte
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -53,7 +53,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 521);
+            this.panelMenu.Size = new System.Drawing.Size(200, 521);
             this.panelMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -64,16 +64,16 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
-            this.btnSalir.IconColor = System.Drawing.Color.White;
+            this.btnSalir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnSalir.IconSize = 32;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(0, 461);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSalir.Rotation = 0D;
-            this.btnSalir.Size = new System.Drawing.Size(220, 60);
+            this.btnSalir.Size = new System.Drawing.Size(200, 60);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,7 +97,7 @@
             this.btnResultado.Name = "btnResultado";
             this.btnResultado.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnResultado.Rotation = 0D;
-            this.btnResultado.Size = new System.Drawing.Size(220, 60);
+            this.btnResultado.Size = new System.Drawing.Size(200, 60);
             this.btnResultado.TabIndex = 2;
             this.btnResultado.Text = "Resultado";
             this.btnResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -121,7 +121,7 @@
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnInicio.Rotation = 0D;
-            this.btnInicio.Size = new System.Drawing.Size(220, 60);
+            this.btnInicio.Size = new System.Drawing.Size(200, 60);
             this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -134,7 +134,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 110);
+            this.panel1.Size = new System.Drawing.Size(200, 110);
             this.panel1.TabIndex = 0;
             // 
             // btnHome
@@ -144,7 +144,7 @@
             this.btnHome.Image = global::MetodoDeTransporte.Properties.Resources.transporte;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(220, 110);
+            this.btnHome.Size = new System.Drawing.Size(200, 110);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -155,9 +155,9 @@
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panelTitulo.Controls.Add(this.labelTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(220, 0);
+            this.panelTitulo.Location = new System.Drawing.Point(200, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(664, 70);
+            this.panelTitulo.Size = new System.Drawing.Size(684, 70);
             this.panelTitulo.TabIndex = 2;
             // 
             // labelTitulo
@@ -168,7 +168,7 @@
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19);
             this.labelTitulo.Size = new System.Drawing.Size(291, 67);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Metodo de Transporte";
@@ -177,12 +177,12 @@
             // 
             this.panelContentForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.panelContentForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentForm.Location = new System.Drawing.Point(220, 70);
+            this.panelContentForm.Location = new System.Drawing.Point(200, 70);
             this.panelContentForm.Name = "panelContentForm";
-            this.panelContentForm.Size = new System.Drawing.Size(664, 451);
+            this.panelContentForm.Size = new System.Drawing.Size(684, 451);
             this.panelContentForm.TabIndex = 3;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.panelContentForm);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "Metodo de Transporte";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

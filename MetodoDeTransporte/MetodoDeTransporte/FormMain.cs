@@ -12,7 +12,7 @@ using FontAwesome.Sharp;
 
 namespace MetodoDeTransporte
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
         //bordes de los botones
         private IconButton btnActual;
@@ -20,12 +20,9 @@ namespace MetodoDeTransporte
         private Color colorBtn = Color.FromArgb(68, 189, 50);
         private Form formActivo = null;
 
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
-
-            btnSalir.ForeColor = Color.FromArgb(231, 76, 60);
-            btnSalir.IconColor = Color.FromArgb(231, 76, 60);
 
             //agrego el border izquierdo al panel menu
             borderLeftBtn = new Panel();
