@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnResultado = new FontAwesome.Sharp.IconButton();
-            this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panelContentForm = new System.Windows.Forms.Panel();
+            this.pbImagenMain = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnResultado = new FontAwesome.Sharp.IconButton();
+            this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.txtInformacion = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelTitulo.SuspendLayout();
+            this.panelContentForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenMain)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -52,9 +57,70 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 521);
+            this.panelMenu.Size = new System.Drawing.Size(300, 802);
             this.panelMenu.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(300, 169);
+            this.panel1.TabIndex = 0;
+            // 
+            // panelTitulo
+            // 
+            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelTitulo.Controls.Add(this.labelTitulo);
+            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitulo.Location = new System.Drawing.Point(300, 0);
+            this.panelTitulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelTitulo.Name = "panelTitulo";
+            this.panelTitulo.Size = new System.Drawing.Size(1026, 108);
+            this.panelTitulo.TabIndex = 2;
+            // 
+            // labelTitulo
+            // 
+            this.labelTitulo.AutoSize = true;
+            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
+            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
+            this.labelTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitulo.Name = "labelTitulo";
+            this.labelTitulo.Padding = new System.Windows.Forms.Padding(28, 29, 28, 29);
+            this.labelTitulo.Size = new System.Drawing.Size(425, 98);
+            this.labelTitulo.TabIndex = 0;
+            this.labelTitulo.Text = "Modelo de Transporte";
+            // 
+            // panelContentForm
+            // 
+            this.panelContentForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panelContentForm.Controls.Add(this.txtInformacion);
+            this.panelContentForm.Controls.Add(this.pbImagenMain);
+            this.panelContentForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContentForm.Location = new System.Drawing.Point(300, 108);
+            this.panelContentForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelContentForm.Name = "panelContentForm";
+            this.panelContentForm.Size = new System.Drawing.Size(1026, 694);
+            this.panelContentForm.TabIndex = 3;
+            // 
+            // pbImagenMain
+            // 
+            this.pbImagenMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbImagenMain.Image = global::MetodoDeTransporte.Properties.Resources.convoy_semi_truck;
+            this.pbImagenMain.Location = new System.Drawing.Point(158, 276);
+            this.pbImagenMain.Name = "pbImagenMain";
+            this.pbImagenMain.Size = new System.Drawing.Size(733, 369);
+            this.pbImagenMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagenMain.TabIndex = 0;
+            this.pbImagenMain.TabStop = false;
             // 
             // btnSalir
             // 
@@ -69,11 +135,12 @@
             this.btnSalir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.btnSalir.IconSize = 32;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(0, 461);
+            this.btnSalir.Location = new System.Drawing.Point(0, 710);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSalir.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
             this.btnSalir.Rotation = 0D;
-            this.btnSalir.Size = new System.Drawing.Size(200, 60);
+            this.btnSalir.Size = new System.Drawing.Size(300, 92);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,11 +160,12 @@
             this.btnResultado.IconColor = System.Drawing.Color.White;
             this.btnResultado.IconSize = 32;
             this.btnResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResultado.Location = new System.Drawing.Point(0, 170);
+            this.btnResultado.Location = new System.Drawing.Point(0, 261);
+            this.btnResultado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResultado.Name = "btnResultado";
-            this.btnResultado.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnResultado.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
             this.btnResultado.Rotation = 0D;
-            this.btnResultado.Size = new System.Drawing.Size(200, 60);
+            this.btnResultado.Size = new System.Drawing.Size(300, 92);
             this.btnResultado.TabIndex = 2;
             this.btnResultado.Text = "Resultado";
             this.btnResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -117,25 +185,17 @@
             this.btnInicio.IconColor = System.Drawing.Color.White;
             this.btnInicio.IconSize = 32;
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 110);
+            this.btnInicio.Location = new System.Drawing.Point(0, 169);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnInicio.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
             this.btnInicio.Rotation = 0D;
-            this.btnInicio.Size = new System.Drawing.Size(200, 60);
+            this.btnInicio.Size = new System.Drawing.Size(300, 92);
             this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 110);
-            this.panel1.TabIndex = 0;
             // 
             // btnHome
             // 
@@ -143,60 +203,49 @@
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnHome.Image = global::MetodoDeTransporte.Properties.Resources.transporte;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(200, 110);
+            this.btnHome.Size = new System.Drawing.Size(300, 169);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // panelTitulo
+            // txtInformacion
             // 
-            this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.panelTitulo.Controls.Add(this.labelTitulo);
-            this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(200, 0);
-            this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(684, 70);
-            this.panelTitulo.TabIndex = 2;
-            // 
-            // labelTitulo
-            // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
-            this.labelTitulo.Location = new System.Drawing.Point(0, 0);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19);
-            this.labelTitulo.Size = new System.Drawing.Size(291, 67);
-            this.labelTitulo.TabIndex = 0;
-            this.labelTitulo.Text = "Metodo de Transporte";
-            // 
-            // panelContentForm
-            // 
-            this.panelContentForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.panelContentForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentForm.Location = new System.Drawing.Point(200, 70);
-            this.panelContentForm.Name = "panelContentForm";
-            this.panelContentForm.Size = new System.Drawing.Size(684, 451);
-            this.panelContentForm.TabIndex = 3;
+            this.txtInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtInformacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInformacion.ForeColor = System.Drawing.Color.White;
+            this.txtInformacion.Location = new System.Drawing.Point(136, 61);
+            this.txtInformacion.Multiline = true;
+            this.txtInformacion.Name = "txtInformacion";
+            this.txtInformacion.ReadOnly = true;
+            this.txtInformacion.Size = new System.Drawing.Size(788, 168);
+            this.txtInformacion.TabIndex = 2;
+            this.txtInformacion.Text = resources.GetString("txtInformacion.Text");
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 521);
+            this.ClientSize = new System.Drawing.Size(1326, 802);
             this.Controls.Add(this.panelContentForm);
             this.Controls.Add(this.panelTitulo);
             this.Controls.Add(this.panelMenu);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMain";
             this.Text = "Metodo de Transporte";
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panelTitulo.ResumeLayout(false);
             this.panelTitulo.PerformLayout();
+            this.panelContentForm.ResumeLayout(false);
+            this.panelContentForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagenMain)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,6 +260,8 @@
         private System.Windows.Forms.Label labelTitulo;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.Panel panelContentForm;
+        private System.Windows.Forms.PictureBox pbImagenMain;
+        private System.Windows.Forms.TextBox txtInformacion;
     }
 }
 

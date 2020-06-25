@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtInformacion.Text" xml:space="preserve">
+    <value>El problema del transporte o distribución, es un problema de redes especial en programación lineal que se funda en la necesidad de llevar unidades de un punto específico llamado fuente u origen  hacia otro punto específico llamado destino. Los principales objetvos de un modelo de transporte son la satisfacción de todos los requerimientos establecidos por los destinos, y claro está, la minimización de los costos relacionados con el plan determinado por las rutas escogidas.</value>
+  </data>
 </root>

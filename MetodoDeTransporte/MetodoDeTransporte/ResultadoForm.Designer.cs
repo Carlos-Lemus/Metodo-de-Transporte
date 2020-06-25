@@ -39,9 +39,11 @@
             this.dgvResultados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultados.Location = new System.Drawing.Point(42, 107);
+            this.dgvResultados.Location = new System.Drawing.Point(63, 165);
+            this.dgvResultados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvResultados.Name = "dgvResultados";
-            this.dgvResultados.Size = new System.Drawing.Size(594, 214);
+            this.dgvResultados.RowHeadersWidth = 62;
+            this.dgvResultados.Size = new System.Drawing.Size(891, 329);
             this.dgvResultados.TabIndex = 0;
             // 
             // btnLimpiar
@@ -54,12 +56,13 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
-            this.btnLimpiar.IconSize = 16;
-            this.btnLimpiar.Location = new System.Drawing.Point(273, 360);
+            this.btnLimpiar.IconSize = 32;
+            this.btnLimpiar.Location = new System.Drawing.Point(431, 558);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btnLimpiar.Rotation = 0D;
-            this.btnLimpiar.Size = new System.Drawing.Size(140, 40);
+            this.btnLimpiar.Size = new System.Drawing.Size(210, 62);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -71,22 +74,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 42);
+            this.label1.Location = new System.Drawing.Point(328, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 29);
+            this.label1.Size = new System.Drawing.Size(377, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Resultados del calculo";
             // 
             // ResultadoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(684, 412);
+            this.ClientSize = new System.Drawing.Size(1026, 634);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dgvResultados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ResultadoForm";
             this.Text = "ResultadoForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultados)).EndInit();

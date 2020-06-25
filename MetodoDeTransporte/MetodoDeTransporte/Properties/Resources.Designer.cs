@@ -63,6 +63,16 @@ namespace MetodoDeTransporte.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap convoy_semi_truck {
+            get {
+                object obj = ResourceManager.GetObject("convoy-semi-truck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap entrega {
             get {
                 object obj = ResourceManager.GetObject("entrega", resourceCulture);
