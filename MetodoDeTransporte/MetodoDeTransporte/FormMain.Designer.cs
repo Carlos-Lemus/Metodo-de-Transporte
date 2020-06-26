@@ -173,7 +173,7 @@
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19, 19, 19, 19);
+            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19);
             this.labelTitulo.Size = new System.Drawing.Size(291, 67);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Modelo de Transporte";
@@ -198,7 +198,7 @@
             this.txtInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInformacion.ForeColor = System.Drawing.Color.White;
             this.txtInformacion.Location = new System.Drawing.Point(91, 40);
-            this.txtInformacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInformacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtInformacion.Multiline = true;
             this.txtInformacion.Name = "txtInformacion";
             this.txtInformacion.ReadOnly = true;
@@ -213,7 +213,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbImagenMain.Image = global::MetodoDeTransporte.Properties.Resources.convoy_semi_truck;
             this.pbImagenMain.Location = new System.Drawing.Point(147, 183);
-            this.pbImagenMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbImagenMain.Margin = new System.Windows.Forms.Padding(2);
             this.pbImagenMain.Name = "pbImagenMain";
             this.pbImagenMain.Size = new System.Drawing.Size(415, 220);
             this.pbImagenMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -20,14 +20,6 @@ namespace MetodoDeTransporte
             cbTipoMetodo.SelectedIndex = 0;
         }
 
-        //el metodo limpia el formulario
-        private void limpiarTabla()
-        {
-            //vacio la tabla
-            dvgTablaDatos.Columns.Clear();
-            dvgTablaDatos.Columns.Clear();
-        }
-
         private void txtCantidadDemanada_KeyPress(object sender, KeyPressEventArgs e)
         {
             //validaciones
@@ -70,65 +62,12 @@ namespace MetodoDeTransporte
 
                 int numeroColumn = demanda + 2;
                 int numeroRow = oferta + 1;
-                int origen = 0;
 
-                limpiarTabla(); //el metodo limpia el formulario
+                limpiarTabla(); //el metodo limpia la tabla
 
-                //agrego las columnas
-                for (int i = 0; i < numeroColumn; i++)
-                {
-                    DataGridViewTextBoxColumn columna = new DataGridViewTextBoxColumn();
-                    
-                    if(i == 0)
-                    {
-                        columna.HeaderText = "Destino/Origen";
-                    } 
-                    else if(i == numeroColumn - 1) {
-                        columna.HeaderText = "Oferta";
-                    }
-                    else
-                    {
-                        columna.HeaderText = "D" + i;
-                    }
+                llenarColumnasTabla(numeroColumn);
 
-                    columna.Width = 120;
-
-                    dvgTablaDatos.Columns.Add(columna);
-                }
-
-                origen = 0;
-
-                //agrego las filas
-                for(int i = 0; i < numeroRow; i++)
-                {
-                    DataGridViewRow row = (DataGridViewRow)dvgTablaDatos.Rows[i].Clone();
-
-                    origen++;
-
-                    for (int j = 0; j < numeroColumn; j++)
-                    {
-                        //inserto un determinado valor en fila 0 de la columna 0
-                        if(j == 0)
-                        {
-                            if (i == numeroRow - 1)
-                            {
-                                row.Cells[0].Value = "Demanda";
-                            } else
-                            {
-                                row.Cells[j].Value = "O" + (i + 1);
-                            }
-
-                        }
-                        else
-                        {
-                            row.Cells[j].Value = "";
-                        }
-                        
-                    }
-
-                    dvgTablaDatos.Rows.Add(row);
-
-                }
+                llenarFilasTabla(numeroColumn, numeroRow);
             }
 
             else
@@ -155,7 +94,7 @@ namespace MetodoDeTransporte
                 switch (tipoMetodo)
                 {
                     case "Esquina Noroeste":
-                        MessageBox.Show("Esquina Noroeste");
+                        calcularEsquinaNoroeste();
                         break;
 
                     case "Costo Minimo":
@@ -177,5 +116,85 @@ namespace MetodoDeTransporte
 
             
         }
+
+
+        //el metodo calcula el resultado por el metodo de esquina noroeste
+        private void calcularEsquinaNoroeste()
+        {
+            MessageBox.Show("Esquina Noroeste");
+        }
+
+        //el metodo limpia el formulario
+        private void limpiarTabla()
+        {
+            //vacio la tabla
+            dvgTablaDatos.Columns.Clear();
+            dvgTablaDatos.Columns.Clear();
+        }
+
+        //el metodo agrega las columnas de la tabla
+        private void llenarColumnasTabla(int numeroColumn)
+        {
+            //agrego las columnas
+            for (int i = 0; i < numeroColumn; i++)
+            {
+                DataGridViewTextBoxColumn columna = new DataGridViewTextBoxColumn();
+
+                if (i == 0)
+                {
+                    columna.HeaderText = "Destino/Origen";
+                }
+                else if (i == numeroColumn - 1)
+                {
+                    columna.HeaderText = "Oferta";
+                }
+                else
+                {
+                    columna.HeaderText = "D" + i;
+                }
+
+                columna.Width = 120;
+
+                dvgTablaDatos.Columns.Add(columna);
+            }
+        }
+
+        //el metodo llena las filas de la tabla
+        private void llenarFilasTabla(int numeroColumn, int numeroRow)
+        {
+
+            //agrego las filas
+            for (int i = 0; i < numeroRow; i++)
+            {
+                DataGridViewRow row = (DataGridViewRow)dvgTablaDatos.Rows[i].Clone();
+
+                for (int j = 0; j < numeroColumn; j++)
+                {
+                    //inserto un determinado valor en fila 0 de la columna 0
+                    if (j == 0)
+                    {
+                        if (i == numeroRow - 1)
+                        {
+                            row.Cells[0].Value = "Demanda";
+                        }
+                        else
+                        {
+                            row.Cells[j].Value = "O" + (i + 1);
+                        }
+
+                    }
+                    else
+                    {
+                        row.Cells[j].Value = "0";
+                    }
+
+                }
+
+                dvgTablaDatos.Rows.Add(row);
+
+            }
+        }
+
     }
+
 }
