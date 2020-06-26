@@ -78,12 +78,12 @@
             this.cbTipoMetodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTipoMetodo.FormattingEnabled = true;
             this.cbTipoMetodo.Items.AddRange(new object[] {
-            "Esquina Nooeste",
+            "Esquina Noroeste",
             "Costo Minimo",
             "Vogel"});
             this.cbTipoMetodo.Location = new System.Drawing.Point(9, 256);
             this.cbTipoMetodo.Name = "cbTipoMetodo";
-            this.cbTipoMetodo.Size = new System.Drawing.Size(144, 28);
+            this.cbTipoMetodo.Size = new System.Drawing.Size(154, 28);
             this.cbTipoMetodo.TabIndex = 13;
             // 
             // label3
@@ -131,7 +131,7 @@
             this.txtCantidadDemanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadDemanda.Location = new System.Drawing.Point(7, 78);
             this.txtCantidadDemanda.Name = "txtCantidadDemanda";
-            this.txtCantidadDemanda.Size = new System.Drawing.Size(147, 26);
+            this.txtCantidadDemanda.Size = new System.Drawing.Size(156, 26);
             this.txtCantidadDemanda.TabIndex = 7;
             this.txtCantidadDemanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDemanada_KeyPress);
             // 
@@ -157,7 +157,7 @@
             this.txtCantidadOferta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidadOferta.Location = new System.Drawing.Point(8, 168);
             this.txtCantidadOferta.Name = "txtCantidadOferta";
-            this.txtCantidadOferta.Size = new System.Drawing.Size(145, 26);
+            this.txtCantidadOferta.Size = new System.Drawing.Size(155, 26);
             this.txtCantidadOferta.TabIndex = 8;
             this.txtCantidadOferta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadOferta_KeyPress);
             // 
@@ -198,6 +198,7 @@
             this.btnResultados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResultados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnResultados.UseVisualStyleBackColor = false;
+            this.btnResultados.Click += new System.EventHandler(this.btnResultados_Click);
             // 
             // btnLimpiar
             // 

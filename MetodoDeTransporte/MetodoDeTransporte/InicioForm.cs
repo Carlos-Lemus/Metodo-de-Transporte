@@ -51,6 +51,14 @@ namespace MetodoDeTransporte
             }
         }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            //vacio las cajas
+            txtCantidadDemanda.Text = null;
+            txtCantidadOferta.Text = null;
+            limpiarTabla(); //el metodo limpia el formulario
+        }
+
         private void btnOk_Click(object sender, EventArgs e)
         {
             //evaluo que los campos no esten vacios
@@ -130,12 +138,44 @@ namespace MetodoDeTransporte
 
         }
 
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        private void btnResultados_Click(object sender, EventArgs e)
         {
-            //vacio las cajas
-            txtCantidadDemanda.Text = null;
-            txtCantidadOferta.Text = null;
-            limpiarTabla(); //el metodo limpia el formulario
+            calcular(); //el metodo hace las operaciones para calcular el resultado
+        }
+
+        //el metodo hace las operaciones para calcular el resultado
+        private void calcular()
+        {
+            string tipoMetodo = "";
+
+            try
+            {
+                tipoMetodo = cbTipoMetodo.SelectedItem.ToString();
+
+                switch (tipoMetodo)
+                {
+                    case "Esquina Noroeste":
+                        MessageBox.Show("Esquina Noroeste");
+                        break;
+
+                    case "Costo Minimo":
+                        MessageBox.Show("Costo Minimo");
+                        break;
+
+                    case "Vogel":
+                        MessageBox.Show("Vogel");
+                        break;
+
+                    default:
+                        MessageBox.Show("No ha seleccionado ninguno de los tipos de metodos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                }
+
+            } catch(Exception ex) {
+                MessageBox.Show("No ha seleccionado ninguno de los tipos de metodos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            
         }
     }
 }
