@@ -33,7 +33,7 @@
             this.cbTipoMetodo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnOk = new FontAwesome.Sharp.IconButton();
-            this.txtCantidadDemanada = new System.Windows.Forms.TextBox();
+            this.txtCantidadDemanda = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCantidadOferta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,11 +48,10 @@
             this.dvgTablaDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgTablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgTablaDatos.Location = new System.Drawing.Point(62, 60);
-            this.dvgTablaDatos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dvgTablaDatos.Location = new System.Drawing.Point(41, 39);
             this.dvgTablaDatos.Name = "dvgTablaDatos";
             this.dvgTablaDatos.RowHeadersWidth = 62;
-            this.dvgTablaDatos.Size = new System.Drawing.Size(639, 394);
+            this.dvgTablaDatos.Size = new System.Drawing.Size(426, 256);
             this.dvgTablaDatos.TabIndex = 0;
             // 
             // panelLateral
@@ -61,15 +60,14 @@
             this.panelLateral.Controls.Add(this.cbTipoMetodo);
             this.panelLateral.Controls.Add(this.label3);
             this.panelLateral.Controls.Add(this.btnOk);
-            this.panelLateral.Controls.Add(this.txtCantidadDemanada);
+            this.panelLateral.Controls.Add(this.txtCantidadDemanda);
             this.panelLateral.Controls.Add(this.label2);
             this.panelLateral.Controls.Add(this.txtCantidadOferta);
             this.panelLateral.Controls.Add(this.label1);
             this.panelLateral.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelLateral.Location = new System.Drawing.Point(764, 0);
-            this.panelLateral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelLateral.Location = new System.Drawing.Point(509, 0);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(262, 634);
+            this.panelLateral.Size = new System.Drawing.Size(175, 412);
             this.panelLateral.TabIndex = 1;
             // 
             // cbTipoMetodo
@@ -83,10 +81,9 @@
             "Esquina Nooeste",
             "Costo Minimo",
             "Vogel"});
-            this.cbTipoMetodo.Location = new System.Drawing.Point(14, 394);
-            this.cbTipoMetodo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTipoMetodo.Location = new System.Drawing.Point(9, 256);
             this.cbTipoMetodo.Name = "cbTipoMetodo";
-            this.cbTipoMetodo.Size = new System.Drawing.Size(214, 37);
+            this.cbTipoMetodo.Size = new System.Drawing.Size(144, 28);
             this.cbTipoMetodo.TabIndex = 13;
             // 
             // label3
@@ -97,10 +94,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 335);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(1, 218);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(185, 29);
+            this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Tipo de metodo";
             // 
@@ -116,30 +112,28 @@
             this.btnOk.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnOk.IconColor = System.Drawing.Color.White;
             this.btnOk.IconSize = 32;
-            this.btnOk.Location = new System.Drawing.Point(33, 502);
-            this.btnOk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnOk.Location = new System.Drawing.Point(22, 326);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Padding = new System.Windows.Forms.Padding(15, 0, 30, 0);
+            this.btnOk.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnOk.Rotation = 0D;
-            this.btnOk.Size = new System.Drawing.Size(195, 62);
+            this.btnOk.Size = new System.Drawing.Size(130, 40);
             this.btnOk.TabIndex = 11;
             this.btnOk.Text = "Ok";
             this.btnOk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // txtCantidadDemanada
+            // txtCantidadDemanda
             // 
-            this.txtCantidadDemanada.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCantidadDemanda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCantidadDemanada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadDemanada.Location = new System.Drawing.Point(10, 120);
-            this.txtCantidadDemanada.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtCantidadDemanada.Name = "txtCantidadDemanada";
-            this.txtCantidadDemanada.Size = new System.Drawing.Size(218, 35);
-            this.txtCantidadDemanada.TabIndex = 7;
-            this.txtCantidadDemanada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDemanada_KeyPress);
+            this.txtCantidadDemanda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidadDemanda.Location = new System.Drawing.Point(7, 78);
+            this.txtCantidadDemanda.Name = "txtCantidadDemanda";
+            this.txtCantidadDemanda.Size = new System.Drawing.Size(147, 26);
+            this.txtCantidadDemanda.TabIndex = 7;
+            this.txtCantidadDemanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadDemanada_KeyPress);
             // 
             // label2
             // 
@@ -149,10 +143,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(2, 60);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(1, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 29);
+            this.label2.Size = new System.Drawing.Size(169, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Cantidad de Demanda";
             // 
@@ -162,10 +155,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCantidadOferta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadOferta.Location = new System.Drawing.Point(12, 258);
-            this.txtCantidadOferta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCantidadOferta.Location = new System.Drawing.Point(8, 168);
             this.txtCantidadOferta.Name = "txtCantidadOferta";
-            this.txtCantidadOferta.Size = new System.Drawing.Size(216, 35);
+            this.txtCantidadOferta.Size = new System.Drawing.Size(145, 26);
             this.txtCantidadOferta.TabIndex = 8;
             this.txtCantidadOferta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidadOferta_KeyPress);
             // 
@@ -177,10 +169,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 197);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(1, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 29);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Cantidad de oferta";
             // 
@@ -197,12 +188,11 @@
             this.btnResultados.IconColor = System.Drawing.Color.White;
             this.btnResultados.IconSize = 32;
             this.btnResultados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResultados.Location = new System.Drawing.Point(62, 558);
-            this.btnResultados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnResultados.Location = new System.Drawing.Point(41, 363);
             this.btnResultados.Name = "btnResultados";
-            this.btnResultados.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnResultados.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnResultados.Rotation = 0D;
-            this.btnResultados.Size = new System.Drawing.Size(210, 62);
+            this.btnResultados.Size = new System.Drawing.Size(140, 40);
             this.btnResultados.TabIndex = 12;
             this.btnResultados.Text = "Calcular";
             this.btnResultados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,12 +212,11 @@
             this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconSize = 32;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(315, 558);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLimpiar.Location = new System.Drawing.Point(210, 363);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnLimpiar.Rotation = 0D;
-            this.btnLimpiar.Size = new System.Drawing.Size(210, 62);
+            this.btnLimpiar.Size = new System.Drawing.Size(140, 40);
             this.btnLimpiar.TabIndex = 13;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,16 +226,15 @@
             // 
             // InicioForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1026, 634);
+            this.ClientSize = new System.Drawing.Size(684, 412);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnResultados);
             this.Controls.Add(this.panelLateral);
             this.Controls.Add(this.dvgTablaDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "InicioForm";
             this.Text = "InicioForm";
             ((System.ComponentModel.ISupportInitialize)(this.dvgTablaDatos)).EndInit();
@@ -261,7 +249,7 @@
         private System.Windows.Forms.DataGridView dvgTablaDatos;
         private System.Windows.Forms.Panel panelLateral;
         private FontAwesome.Sharp.IconButton btnOk;
-        private System.Windows.Forms.TextBox txtCantidadDemanada;
+        private System.Windows.Forms.TextBox txtCantidadDemanda;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCantidadOferta;
         private System.Windows.Forms.Label label1;
