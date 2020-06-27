@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,9 @@ namespace MetodoDeTransporte
 {
     public partial class InicioForm : Form
     {
+
+        private EsquinaNoroeste esquinaNoroeste = new EsquinaNoroeste();
+
         public InicioForm()
         {
             InitializeComponent();
@@ -94,7 +98,7 @@ namespace MetodoDeTransporte
                 switch (tipoMetodo)
                 {
                     case "Esquina Noroeste":
-                        calcularEsquinaNoroeste();
+                        esquinaNoroeste.calcularResultado(dvgTablaDatos);
                         break;
 
                     case "Costo Minimo":
@@ -117,12 +121,6 @@ namespace MetodoDeTransporte
             
         }
 
-
-        //el metodo calcula el resultado por el metodo de esquina noroeste
-        private void calcularEsquinaNoroeste()
-        {
-            MessageBox.Show("Esquina Noroeste");
-        }
 
         //el metodo limpia el formulario
         private void limpiarTabla()
@@ -166,6 +164,8 @@ namespace MetodoDeTransporte
             //agrego las filas
             for (int i = 0; i < numeroRow; i++)
             {
+
+                //obtengo la fila actual
                 DataGridViewRow row = (DataGridViewRow)dvgTablaDatos.Rows[i].Clone();
 
                 for (int j = 0; j < numeroColumn; j++)
