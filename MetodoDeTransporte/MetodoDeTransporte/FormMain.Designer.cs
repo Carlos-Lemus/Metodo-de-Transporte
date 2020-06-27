@@ -40,6 +40,7 @@
             this.panelContentForm = new System.Windows.Forms.Panel();
             this.txtInformacion = new System.Windows.Forms.TextBox();
             this.pbImagenMain = new System.Windows.Forms.PictureBox();
+            this.txtSubTitulo = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -58,7 +59,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 501);
+            this.panelMenu.Size = new System.Drawing.Size(160, 501);
             this.panelMenu.TabIndex = 1;
             // 
             // btnSalir
@@ -78,7 +79,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSalir.Rotation = 0D;
-            this.btnSalir.Size = new System.Drawing.Size(200, 60);
+            this.btnSalir.Size = new System.Drawing.Size(160, 60);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -98,11 +99,11 @@
             this.btnResultado.IconColor = System.Drawing.Color.White;
             this.btnResultado.IconSize = 32;
             this.btnResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResultado.Location = new System.Drawing.Point(0, 170);
+            this.btnResultado.Location = new System.Drawing.Point(0, 150);
             this.btnResultado.Name = "btnResultado";
             this.btnResultado.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnResultado.Rotation = 0D;
-            this.btnResultado.Size = new System.Drawing.Size(200, 60);
+            this.btnResultado.Size = new System.Drawing.Size(160, 60);
             this.btnResultado.TabIndex = 2;
             this.btnResultado.Text = "Resultado";
             this.btnResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -122,11 +123,11 @@
             this.btnInicio.IconColor = System.Drawing.Color.White;
             this.btnInicio.IconSize = 32;
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(0, 110);
+            this.btnInicio.Location = new System.Drawing.Point(0, 90);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnInicio.Rotation = 0D;
-            this.btnInicio.Size = new System.Drawing.Size(200, 60);
+            this.btnInicio.Size = new System.Drawing.Size(160, 60);
             this.btnInicio.TabIndex = 1;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -139,7 +140,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 110);
+            this.panel1.Size = new System.Drawing.Size(160, 90);
             this.panel1.TabIndex = 0;
             // 
             // btnHome
@@ -149,7 +150,7 @@
             this.btnHome.Image = global::MetodoDeTransporte.Properties.Resources.transporte;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(200, 110);
+            this.btnHome.Size = new System.Drawing.Size(160, 90);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnHome.TabIndex = 0;
             this.btnHome.TabStop = false;
@@ -160,9 +161,9 @@
             this.panelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.panelTitulo.Controls.Add(this.labelTitulo);
             this.panelTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitulo.Location = new System.Drawing.Point(200, 0);
+            this.panelTitulo.Location = new System.Drawing.Point(160, 0);
             this.panelTitulo.Name = "panelTitulo";
-            this.panelTitulo.Size = new System.Drawing.Size(684, 70);
+            this.panelTitulo.Size = new System.Drawing.Size(724, 60);
             this.panelTitulo.TabIndex = 2;
             // 
             // labelTitulo
@@ -173,20 +174,21 @@
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(255)))));
             this.labelTitulo.Location = new System.Drawing.Point(0, 0);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Padding = new System.Windows.Forms.Padding(19);
-            this.labelTitulo.Size = new System.Drawing.Size(291, 67);
+            this.labelTitulo.Padding = new System.Windows.Forms.Padding(15);
+            this.labelTitulo.Size = new System.Drawing.Size(283, 59);
             this.labelTitulo.TabIndex = 0;
             this.labelTitulo.Text = "Modelo de Transporte";
             // 
             // panelContentForm
             // 
             this.panelContentForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panelContentForm.Controls.Add(this.txtSubTitulo);
             this.panelContentForm.Controls.Add(this.txtInformacion);
             this.panelContentForm.Controls.Add(this.pbImagenMain);
             this.panelContentForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContentForm.Location = new System.Drawing.Point(200, 70);
+            this.panelContentForm.Location = new System.Drawing.Point(160, 60);
             this.panelContentForm.Name = "panelContentForm";
-            this.panelContentForm.Size = new System.Drawing.Size(684, 431);
+            this.panelContentForm.Size = new System.Drawing.Size(724, 441);
             this.panelContentForm.TabIndex = 3;
             // 
             // txtInformacion
@@ -197,12 +199,12 @@
             this.txtInformacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInformacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInformacion.ForeColor = System.Drawing.Color.White;
-            this.txtInformacion.Location = new System.Drawing.Point(91, 40);
+            this.txtInformacion.Location = new System.Drawing.Point(55, 78);
             this.txtInformacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtInformacion.Multiline = true;
             this.txtInformacion.Name = "txtInformacion";
             this.txtInformacion.ReadOnly = true;
-            this.txtInformacion.Size = new System.Drawing.Size(525, 109);
+            this.txtInformacion.Size = new System.Drawing.Size(617, 122);
             this.txtInformacion.TabIndex = 2;
             this.txtInformacion.Text = resources.GetString("txtInformacion.Text");
             // 
@@ -212,13 +214,31 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbImagenMain.Image = global::MetodoDeTransporte.Properties.Resources.convoy_semi_truck;
-            this.pbImagenMain.Location = new System.Drawing.Point(147, 183);
+            this.pbImagenMain.Location = new System.Drawing.Point(169, 213);
             this.pbImagenMain.Margin = new System.Windows.Forms.Padding(2);
             this.pbImagenMain.Name = "pbImagenMain";
-            this.pbImagenMain.Size = new System.Drawing.Size(415, 220);
+            this.pbImagenMain.Size = new System.Drawing.Size(394, 206);
             this.pbImagenMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagenMain.TabIndex = 0;
             this.pbImagenMain.TabStop = false;
+            // 
+            // txtSubTitulo
+            // 
+            this.txtSubTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtSubTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSubTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTitulo.ForeColor = System.Drawing.Color.White;
+            this.txtSubTitulo.Location = new System.Drawing.Point(93, 30);
+            this.txtSubTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubTitulo.Multiline = true;
+            this.txtSubTitulo.Name = "txtSubTitulo";
+            this.txtSubTitulo.ReadOnly = true;
+            this.txtSubTitulo.Size = new System.Drawing.Size(544, 28);
+            this.txtSubTitulo.TabIndex = 4;
+            this.txtSubTitulo.Text = "Informacion";
+            this.txtSubTitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormMain
             // 
@@ -254,6 +274,7 @@
         private System.Windows.Forms.Panel panelContentForm;
         private System.Windows.Forms.PictureBox pbImagenMain;
         private System.Windows.Forms.TextBox txtInformacion;
+        private System.Windows.Forms.TextBox txtSubTitulo;
     }
 }
 
