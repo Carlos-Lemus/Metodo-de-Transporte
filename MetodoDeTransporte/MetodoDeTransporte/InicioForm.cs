@@ -115,7 +115,7 @@ namespace MetodoDeTransporte
                 }
 
             } catch(Exception ex) {
-                MessageBox.Show("No ha seleccionado ninguno de los tipos de metodos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se ha podido realizar el calculo\n" + "Mensaje: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             
