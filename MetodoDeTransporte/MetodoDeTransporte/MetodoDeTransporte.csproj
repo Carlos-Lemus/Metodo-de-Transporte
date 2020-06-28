@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CostoMinimo.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="EsquinaNoroeste.cs" />
     <Compile Include="FormMain.cs">

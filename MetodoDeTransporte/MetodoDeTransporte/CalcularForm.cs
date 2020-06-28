@@ -15,6 +15,7 @@ namespace MetodoDeTransporte
     {
 
         private EsquinaNoroeste esquinaNoroeste = new EsquinaNoroeste();
+        private CostoMinimo costoMinimo = new CostoMinimo();
 
         public CalcularForm()
         {
@@ -103,7 +104,8 @@ namespace MetodoDeTransporte
                         break;
 
                     case "Costo Minimo":
-                        MessageBox.Show("Costo Minimo");
+                        Datos.resultadoGlobal = costoMinimo.calcularResultado(dvgTablaDatos);
+                        MessageBox.Show(Datos.resultadoGlobal.ToString());
                         break;
 
                     case "Vogel":
