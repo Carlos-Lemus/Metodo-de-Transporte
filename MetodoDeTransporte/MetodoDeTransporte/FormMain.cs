@@ -127,7 +127,7 @@ namespace MetodoDeTransporte
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            Datos.resultadoGloba = 0;
+            Datos.resultadoGlobal = 0;
             desactivarBtn(); //desactivo el boton seleccionado anterios
             cierraForm(formActivo); //cierro el formulario activo
         }

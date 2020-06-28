@@ -9,8 +9,8 @@ namespace MetodoDeTransporte
 {
     class Datos
     {
-        //variable que tiene el resultado global
-        public static double resultadoGloba = 0;
+        //variable que tiene el resultado global en la aplicacion
+        public static double resultadoGlobal = 0;
 
         //atributos de la clase
         private int cantidad = 0;

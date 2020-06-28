@@ -98,8 +98,8 @@ namespace MetodoDeTransporte
                 switch (tipoMetodo)
                 {
                     case "Esquina Noroeste":
-                        Datos.resultadoGloba = esquinaNoroeste.calcularResultado(dvgTablaDatos);
-                        MessageBox.Show(Datos.resultadoGloba.ToString());
+                        Datos.resultadoGlobal = esquinaNoroeste.calcularResultado(dvgTablaDatos);
+                        MessageBox.Show(Datos.resultadoGlobal.ToString());
                         break;
 
                     case "Costo Minimo":

@@ -21,9 +21,9 @@ namespace MetodoDeTransporte
 
         public void textInfo()
         {
-            if(Datos.resultadoGloba > 0)
+            if(Datos.resultadoGlobal > 0)
             {
-                txtResultado.Text = "La solucion factible es: $" + Datos.resultadoGloba;
+                txtResultado.Text = "La solucion factible es: $" + Datos.resultadoGlobal;
             } else
             {
                 txtResultado.Text = "No se ha realizado ninguna operacion";
@@ -32,7 +32,7 @@ namespace MetodoDeTransporte
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            Datos.resultadoGloba = 0;
+            Datos.resultadoGlobal = 0;
             txtResultado.Text = "No se ha realizado ninguna operacion";
         }
     }
