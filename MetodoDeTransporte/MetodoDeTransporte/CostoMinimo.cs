@@ -23,6 +23,7 @@ namespace MetodoDeTransporte
         private int filaMenor = 0;
 
         private Datos[,] datos;
+        private List<Datos> listaDatos = new List<Datos>();
 
         public CostoMinimo()
         {
@@ -37,6 +38,7 @@ namespace MetodoDeTransporte
 
             if ((ofertaTotal == demandaTotal) && ofertaTotal != 0 && demandaTotal != 0)
             {
+                listaDatos.Clear(); 
 
                 //obtengo las ofertas y demandas de la tabla de forma indiviual
                 ofertaArray = totalOferta();
@@ -77,6 +79,7 @@ namespace MetodoDeTransporte
                 if (ofertaActual == demandaActual)
                 {
                     datos[filaMenor, columnaMenor].Precio = demandaActual;
+                    listaDatos.Add(datos[filaMenor, columnaMenor]);
                     demandaArray[columnaMenor] = 0;
                     ofertaArray[filaMenor] = 0;
 
@@ -89,6 +92,7 @@ namespace MetodoDeTransporte
                     precio = ofertaActual;
                     demandaActual -= ofertaActual;
                     datos[filaMenor, columnaMenor].Precio = precio;
+                    listaDatos.Add(datos[filaMenor, columnaMenor]);
 
                     demandaArray[columnaMenor] = demandaActual;
                     ofertaArray[filaMenor] = 0;
@@ -101,6 +105,7 @@ namespace MetodoDeTransporte
                     precio = demandaActual;
                     ofertaActual -= demandaActual;
                     datos[filaMenor, columnaMenor].Precio = precio;
+                    listaDatos.Add(datos[filaMenor, columnaMenor]);
 
                     ofertaArray[filaMenor] = ofertaActual;
                     demandaArray[columnaMenor] = 0;
@@ -122,16 +127,11 @@ namespace MetodoDeTransporte
             double totalCosto = 0;
             string s = "";
 
-            for (int i = 0; i < datos.GetLength(0); i++)
+            for (int i = 0; i < listaDatos.Count; i++)
             {
-                for (int j = 0; j < datos.GetLength(1); j++)
-                {
-                    if (!datos[i, j].Llena)
-                    {
-                        totalCosto += (datos[i, j].Cantidad * datos[i, j].Precio);
-                        s += datos[i, j].Cantidad.ToString() + "(" + datos[i, j].Precio.ToString() + ") ";
-                    }
-                }
+                totalCosto += (listaDatos[i].Cantidad * listaDatos[i].Precio);
+                s += listaDatos[i].Cantidad.ToString() + "(" + listaDatos[i].Precio.ToString() + ") ";
+                
             }
             MessageBox.Show(s);
 
