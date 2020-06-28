@@ -125,15 +125,11 @@ namespace MetodoDeTransporte
         private double resultadoFinal()
         {
             double totalCosto = 0;
-            string s = "";
 
             for (int i = 0; i < listaDatos.Count; i++)
             {
                 totalCosto += (listaDatos[i].Cantidad * listaDatos[i].Precio);
-                s += listaDatos[i].Cantidad.ToString() + "(" + listaDatos[i].Precio.ToString() + ") ";
-                
             }
-            MessageBox.Show(s);
 
             return totalCosto;
         }
