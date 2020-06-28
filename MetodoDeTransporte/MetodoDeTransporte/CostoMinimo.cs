@@ -37,14 +37,10 @@ namespace MetodoDeTransporte
 
             if ((ofertaTotal == demandaTotal) && ofertaTotal != 0 && demandaTotal != 0)
             {
-                columnaMenor = 0;
-                filaMenor = 0;
 
                 //obtengo las ofertas y demandas de la tabla de forma indiviual
                 ofertaArray = totalOferta();
                 demandaArray = totalDemanda();
-
-                MessageBox.Show(ofertaArray.Length + "x" + demandaArray.Length);
 
                 //obtengo los datos de la tabla y los ingresos al campo cantidad de los objetos datos
                 obtenerDatosTabla();
@@ -76,33 +72,40 @@ namespace MetodoDeTransporte
             {
                 double ofertaActual = ofertaArray[filaMenor];
                 double demandaActual = demandaArray[columnaMenor];
+                double precio;
 
                 if (ofertaActual == demandaActual)
                 {
                     datos[filaMenor, columnaMenor].Precio = demandaActual;
-                    datos[filaMenor, columnaMenor].Llena = true;
                     demandaArray[columnaMenor] = 0;
                     ofertaArray[filaMenor] = 0;
+
+                    sellarDemanda();
+                    sellarOferta();
                 }
 
                 else if (demandaActual > ofertaActual)
                 {
+                    precio = ofertaActual;
                     demandaActual -= ofertaActual;
-                    datos[filaMenor, columnaMenor].Precio = demandaActual;
-                    datos[filaMenor, columnaMenor].Llena = true;
+                    datos[filaMenor, columnaMenor].Precio = precio;
 
                     demandaArray[columnaMenor] = demandaActual;
                     ofertaArray[filaMenor] = 0;
+
+                    sellarOferta();
                 }
 
                 else if (ofertaActual > demandaActual)
                 {
+                    precio = demandaActual;
                     ofertaActual -= demandaActual;
-                    datos[filaMenor, columnaMenor].Precio = ofertaActual;
-                    datos[filaMenor, columnaMenor].Llena = true;
+                    datos[filaMenor, columnaMenor].Precio = precio;
 
                     ofertaArray[filaMenor] = ofertaActual;
                     demandaArray[columnaMenor] = 0;
+
+                    sellarDemanda();
                 }
 
                 return false;
@@ -117,17 +120,20 @@ namespace MetodoDeTransporte
         private double resultadoFinal()
         {
             double totalCosto = 0;
+            string s = "";
 
             for (int i = 0; i < datos.GetLength(0); i++)
             {
                 for (int j = 0; j < datos.GetLength(1); j++)
                 {
-                    if (datos[i, j].Llena)
+                    if (!datos[i, j].Llena)
                     {
                         totalCosto += (datos[i, j].Cantidad * datos[i, j].Precio);
+                        s += datos[i, j].Cantidad.ToString() + "(" + datos[i, j].Precio.ToString() + ") ";
                     }
                 }
             }
+            MessageBox.Show(s);
 
             return totalCosto;
         }
@@ -142,18 +148,31 @@ namespace MetodoDeTransporte
             {
                 for (int j = 0; j < datos.GetLength(1); j++)
                 {
-                    if (datos[i, j].Cantidad != 0)
+                    precio = datos[i, j].Cantidad;
+                    
+                    if (temporal > precio && !datos[i, j].Llena)
                     {
-                        precio = datos[i, j].Cantidad;
-                        if (temporal > precio && !datos[i, j].Llena)
-                        {
-                            filaMenor = i;
-                            columnaMenor = j;
-                            temporal = precio;
-                        }
+                        filaMenor = i;
+                        columnaMenor = j;
+                        temporal = precio;
                     }
                 }
 
+            }
+        }
+
+        public void sellarDemanda()
+        {
+            for (int i = 0; i < datos.GetLength(0); i++)
+            {
+                datos[i, columnaMenor].Llena = true;
+            }
+        }
+        public void sellarOferta()
+        {
+            for (int i = 0; i < datos.GetLength(1); i++)
+            {
+                datos[filaMenor, i].Llena = true;
             }
         }
 
@@ -192,7 +211,6 @@ namespace MetodoDeTransporte
         private void obtenerDatosTabla()
         {
             datos = new Datos[dgvTabla.Rows.Count - 2, dgvTabla.Columns.Count - 2];
-            MessageBox.Show(datos.GetLength(0) + "-" + datos.GetLength(1));
 
             for (int i = 0; i < datos.GetLength(0); i++)
             {
@@ -203,8 +221,6 @@ namespace MetodoDeTransporte
                     datos[i, j].Cantidad = Convert.ToDouble(dgvTabla.Rows[i].Cells[j + 1].Value.ToString());
                 }
             }
-            MessageBox.Show("Fin");
-
         }
 
     }

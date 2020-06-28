@@ -46,8 +46,6 @@ namespace MetodoDeTransporte
                 ofertaArray = totalOferta();
                 demandaArray = totalDemanda();
 
-                MessageBox.Show(ofertaArray.Length + "x" + demandaArray.Length);
-
                 //obtengo los datos de la tabla y los ingresos al campo cantidad de los objetos datos
                 obtenerDatosTabla();
 
@@ -75,6 +73,7 @@ namespace MetodoDeTransporte
             {
                 double ofertaActual = ofertaArray[esquinaFila];
                 double demandaActual = demandaArray[esquinaColumna];
+                double precio;
 
                 if (ofertaActual == demandaActual)
                 {
@@ -88,8 +87,9 @@ namespace MetodoDeTransporte
                 
                 else if (demandaActual > ofertaActual)
                 {
+                    precio = ofertaActual;
                     demandaActual -= ofertaActual;
-                    datos[esquinaFila, esquinaColumna].Precio = demandaActual;
+                    datos[esquinaFila, esquinaColumna].Precio = precio;
                     datos[esquinaFila, esquinaColumna].Llena = true;
 
                     demandaArray[esquinaColumna] = demandaActual;
@@ -99,8 +99,9 @@ namespace MetodoDeTransporte
 
                 else if(ofertaActual > demandaActual)
                 {
+                    precio = demandaActual;
                     ofertaActual -= demandaActual;
-                    datos[esquinaFila, esquinaColumna].Precio = ofertaActual;
+                    datos[esquinaFila, esquinaColumna].Precio = precio;
                     datos[esquinaFila, esquinaColumna].Llena = true;
 
                     ofertaArray[esquinaFila] = ofertaActual;
@@ -120,7 +121,6 @@ namespace MetodoDeTransporte
         private double resultadoFinal()
         {
             double totalCosto = 0;
-
             for(int i = 0; i < datos.GetLength(0); i++)
             {
                 for (int j = 0; j < datos.GetLength(1); j++)
@@ -131,7 +131,6 @@ namespace MetodoDeTransporte
                     }
                 }
             }
-
             return totalCosto;
         }
 
@@ -153,7 +152,7 @@ namespace MetodoDeTransporte
         private double[] totalDemanda()
         {
             double[] demanda = new double[dgvTabla.Columns.Count-2];
-
+            
             for (int i = 1; i < dgvTabla.Columns.Count-1; i++)
             {
                 if (dgvTabla.Rows[dgvTabla.Rows.Count - 2].Cells[i].Value != null)
@@ -170,18 +169,15 @@ namespace MetodoDeTransporte
         private void obtenerDatosTabla()
         {
             datos = new Datos[dgvTabla.Rows.Count-2, dgvTabla.Columns.Count - 2];
-            MessageBox.Show(datos.GetLength(0) + "-"+ datos.GetLength(1));
 
             for(int i = 0; i < datos.GetLength(0); i++)
             {
                 for(int j = 0; j < datos.GetLength(1); j++)
                 {
-
                     datos[i, j] = new Datos();
                     datos[i, j].Cantidad = Convert.ToDouble(dgvTabla.Rows[i].Cells[j+1].Value.ToString());
                 }
             }
-            MessageBox.Show("Fin");
 
         }
     }
