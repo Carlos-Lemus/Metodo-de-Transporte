@@ -94,7 +94,8 @@ namespace MetodoDeTransporte
                 {
                     demandaActual -= ofertaActual;
                     datos[esquinaFila, esquinaColumna].Precio = demandaActual;
-                    
+                    datos[esquinaFila, esquinaColumna].Llena = true;
+
                     demandaArray[esquinaColumna] = demandaActual;
                     ofertaArray[esquinaFila] = 0;
                     esquinaFila++;
@@ -104,6 +105,7 @@ namespace MetodoDeTransporte
                 {
                     ofertaActual -= demandaActual;
                     datos[esquinaFila, esquinaColumna].Precio = ofertaActual;
+                    datos[esquinaFila, esquinaColumna].Llena = true;
 
                     ofertaArray[esquinaFila] = ofertaActual;
                     demandaArray[esquinaColumna] = 0;
@@ -127,7 +129,7 @@ namespace MetodoDeTransporte
             {
                 for (int j = 0; j < datos.GetLength(1); j++)
                 {
-                    if(datos[i, j].Precio>0)
+                    if(datos[i, j].Llena)
                     {
                         totalCosto += (datos[i, j].Cantidad * datos[i, j].Precio); 
                     }
