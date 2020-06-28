@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
             this.btnResultado = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
+            this.btnCalcular = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.labelTitulo = new System.Windows.Forms.Label();
             this.panelContentForm = new System.Windows.Forms.Panel();
+            this.txtSubTitulo = new System.Windows.Forms.TextBox();
             this.txtInformacion = new System.Windows.Forms.TextBox();
             this.pbImagenMain = new System.Windows.Forms.PictureBox();
-            this.txtSubTitulo = new System.Windows.Forms.TextBox();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -52,8 +53,9 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panelMenu.Controls.Add(this.btnSalir);
             this.panelMenu.Controls.Add(this.btnResultado);
+            this.panelMenu.Controls.Add(this.btnSalir);
+            this.panelMenu.Controls.Add(this.btnCalcular);
             this.panelMenu.Controls.Add(this.btnInicio);
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -61,6 +63,30 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(160, 501);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnResultado
+            // 
+            this.btnResultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResultado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnResultado.FlatAppearance.BorderSize = 0;
+            this.btnResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResultado.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResultado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnResultado.IconChar = FontAwesome.Sharp.IconChar.PollH;
+            this.btnResultado.IconColor = System.Drawing.Color.White;
+            this.btnResultado.IconSize = 32;
+            this.btnResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnResultado.Location = new System.Drawing.Point(0, 210);
+            this.btnResultado.Name = "btnResultado";
+            this.btnResultado.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnResultado.Rotation = 0D;
+            this.btnResultado.Size = new System.Drawing.Size(160, 60);
+            this.btnResultado.TabIndex = 4;
+            this.btnResultado.Text = "Resultado";
+            this.btnResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnResultado.UseVisualStyleBackColor = true;
+            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click_1);
             // 
             // btnSalir
             // 
@@ -86,29 +112,29 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnResultado
+            // btnCalcular
             // 
-            this.btnResultado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResultado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnResultado.FlatAppearance.BorderSize = 0;
-            this.btnResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResultado.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResultado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnResultado.IconChar = FontAwesome.Sharp.IconChar.PollH;
-            this.btnResultado.IconColor = System.Drawing.Color.White;
-            this.btnResultado.IconSize = 32;
-            this.btnResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResultado.Location = new System.Drawing.Point(0, 150);
-            this.btnResultado.Name = "btnResultado";
-            this.btnResultado.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnResultado.Rotation = 0D;
-            this.btnResultado.Size = new System.Drawing.Size(160, 60);
-            this.btnResultado.TabIndex = 2;
-            this.btnResultado.Text = "Resultado";
-            this.btnResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnResultado.UseVisualStyleBackColor = true;
-            this.btnResultado.Click += new System.EventHandler(this.btnResultado_Click);
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCalcular.IconChar = FontAwesome.Sharp.IconChar.Calculator;
+            this.btnCalcular.IconColor = System.Drawing.Color.White;
+            this.btnCalcular.IconSize = 32;
+            this.btnCalcular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalcular.Location = new System.Drawing.Point(0, 150);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCalcular.Rotation = 0D;
+            this.btnCalcular.Size = new System.Drawing.Size(160, 60);
+            this.btnCalcular.TabIndex = 2;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnInicio
             // 
@@ -191,6 +217,24 @@
             this.panelContentForm.Size = new System.Drawing.Size(724, 441);
             this.panelContentForm.TabIndex = 3;
             // 
+            // txtSubTitulo
+            // 
+            this.txtSubTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSubTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtSubTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSubTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubTitulo.ForeColor = System.Drawing.Color.White;
+            this.txtSubTitulo.Location = new System.Drawing.Point(93, 30);
+            this.txtSubTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubTitulo.Multiline = true;
+            this.txtSubTitulo.Name = "txtSubTitulo";
+            this.txtSubTitulo.ReadOnly = true;
+            this.txtSubTitulo.Size = new System.Drawing.Size(544, 28);
+            this.txtSubTitulo.TabIndex = 4;
+            this.txtSubTitulo.Text = "Informacion";
+            this.txtSubTitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtInformacion
             // 
             this.txtInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -222,24 +266,6 @@
             this.pbImagenMain.TabIndex = 0;
             this.pbImagenMain.TabStop = false;
             // 
-            // txtSubTitulo
-            // 
-            this.txtSubTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSubTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtSubTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSubTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTitulo.ForeColor = System.Drawing.Color.White;
-            this.txtSubTitulo.Location = new System.Drawing.Point(93, 30);
-            this.txtSubTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSubTitulo.Multiline = true;
-            this.txtSubTitulo.Name = "txtSubTitulo";
-            this.txtSubTitulo.ReadOnly = true;
-            this.txtSubTitulo.Size = new System.Drawing.Size(544, 28);
-            this.txtSubTitulo.TabIndex = 4;
-            this.txtSubTitulo.Text = "Informacion";
-            this.txtSubTitulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,7 +290,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton btnResultado;
+        private FontAwesome.Sharp.IconButton btnCalcular;
         private FontAwesome.Sharp.IconButton btnInicio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnHome;
@@ -275,6 +301,7 @@
         private System.Windows.Forms.PictureBox pbImagenMain;
         private System.Windows.Forms.TextBox txtInformacion;
         private System.Windows.Forms.TextBox txtSubTitulo;
+        private FontAwesome.Sharp.IconButton btnResultado;
     }
 }
 

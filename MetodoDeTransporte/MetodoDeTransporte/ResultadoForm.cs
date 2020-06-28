@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MetodoDeTransporte
 {
     public partial class ResultadoForm : Form
@@ -15,6 +16,24 @@ namespace MetodoDeTransporte
         public ResultadoForm()
         {
             InitializeComponent();
+            textInfo();
+        }
+
+        public void textInfo()
+        {
+            if(Datos.resultadoGloba > 0)
+            {
+                txtResultado.Text = "La solucion factible es: $" + Datos.resultadoGloba;
+            } else
+            {
+                txtResultado.Text = "No se ha realizado ninguna operacion";
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Datos.resultadoGloba = 0;
+            txtResultado.Text = "No se ha realizado ninguna operacion";
         }
     }
 }

@@ -108,17 +108,26 @@ namespace MetodoDeTransporte
         private void btnInicio_Click(object sender, EventArgs e)
         {
             activarBtn(sender, colorBtn); //activo el btn para cambiar sus propiedades
-            abrirForm(new InicioForm()); //abro el formulario de resultados
+            cierraForm(formActivo); //cierro el formulario activo
         }
 
-        private void btnResultado_Click(object sender, EventArgs e)
+        private void btnCalcular_Click(object sender, EventArgs e)
         {
             activarBtn(sender, colorBtn); //activo el btn para cambiar sus propiedades
-            abrirForm(new ResultadoForm()); //abro el formulario de inicio
+            abrirForm(new CalcularForm()); //abro el formulario de resultados
         }
+
+        private void btnResultado_Click_1(object sender, EventArgs e)
+        {
+            activarBtn(sender, colorBtn); //activo el btn para cambiar sus propiedades
+            abrirForm(new ResultadoForm()); //abro el formulario de inicios
+        }
+
+        
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            Datos.resultadoGloba = 0;
             desactivarBtn(); //desactivo el boton seleccionado anterios
             cierraForm(formActivo); //cierro el formulario activo
         }
@@ -127,6 +136,8 @@ namespace MetodoDeTransporte
         {
             Close(); //cierro la ventana
         }
+
+       
     }
 }
 

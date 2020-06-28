@@ -38,7 +38,7 @@ namespace MetodoDeTransporte
             ofertaTotal = totalOferta().Sum();
             demandaTotal = totalDemanda().Sum();
 
-            if (ofertaTotal == demandaTotal)
+            if ((ofertaTotal == demandaTotal)  && ofertaTotal != 0 && demandaTotal != 0)
             {
                 filas = tabla.Rows.Count;
                 columnas = tabla.Columns.Count;
@@ -66,7 +66,7 @@ namespace MetodoDeTransporte
                 return resultado;
 
             } else {
-                MessageBox.Show("La oferta y la demanda no esta balanceadas\nPor lo tanto no se puede realizar la operacion", "Ërror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La oferta y la demanda no esta balanceadas o son igual a 0\nPor lo tanto no se puede realizar la operacion", "Ërror", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
                 return 0;
             }

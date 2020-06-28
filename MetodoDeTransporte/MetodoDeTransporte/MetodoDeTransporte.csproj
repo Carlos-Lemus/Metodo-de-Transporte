@@ -57,11 +57,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="InicioForm.cs">
+    <Compile Include="CalcularForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicioForm.Designer.cs">
-      <DependentUpon>InicioForm.cs</DependentUpon>
+    <Compile Include="CalcularForm.Designer.cs">
+      <DependentUpon>CalcularForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +74,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicioForm.resx">
-      <DependentUpon>InicioForm.cs</DependentUpon>
+    <EmbeddedResource Include="CalcularForm.resx">
+      <DependentUpon>CalcularForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

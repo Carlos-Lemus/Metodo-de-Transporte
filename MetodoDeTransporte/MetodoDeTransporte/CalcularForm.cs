@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace MetodoDeTransporte
 {
-    public partial class InicioForm : Form
+    public partial class CalcularForm : Form
     {
 
         private EsquinaNoroeste esquinaNoroeste = new EsquinaNoroeste();
 
-        public InicioForm()
+        public CalcularForm()
         {
             InitializeComponent();
 
@@ -98,7 +98,8 @@ namespace MetodoDeTransporte
                 switch (tipoMetodo)
                 {
                     case "Esquina Noroeste":
-                        MessageBox.Show(esquinaNoroeste.calcularResultado(dvgTablaDatos).ToString());
+                        Datos.resultadoGloba = esquinaNoroeste.calcularResultado(dvgTablaDatos);
+                        MessageBox.Show(Datos.resultadoGloba.ToString());
                         break;
 
                     case "Costo Minimo":

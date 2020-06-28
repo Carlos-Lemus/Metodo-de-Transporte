@@ -1,6 +1,6 @@
 ﻿namespace MetodoDeTransporte
 {
-    partial class InicioForm
+    partial class CalcularForm
     {
         /// <summary>
         /// Required designer variable.
@@ -236,18 +236,18 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // InicioForm
+            // CalcularForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(724, 441);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnResultados);
             this.Controls.Add(this.panelLateral);
             this.Controls.Add(this.dvgTablaDatos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "InicioForm";
+            this.Name = "CalcularForm";
             this.Text = "InicioForm";
             ((System.ComponentModel.ISupportInitialize)(this.dvgTablaDatos)).EndInit();
             this.panelLateral.ResumeLayout(false);
