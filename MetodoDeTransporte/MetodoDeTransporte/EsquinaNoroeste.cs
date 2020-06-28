@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 using System.Globalization;
 
 namespace MetodoDeTransporte
@@ -15,8 +14,8 @@ namespace MetodoDeTransporte
         private bool seguir;
         private DataGridView dgvTabla;
 
-        private double[] ofertaActual;
-        private double[] demandaActual;
+        private double[] ofertaArray;
+        private double[] demandaArray;
         
         private double ofertaTotal = 0;
         private double demandaTotal = 0;
@@ -27,50 +26,89 @@ namespace MetodoDeTransporte
         private int columnas =  0;
 
         private Datos[ , ] datos;
+
         public EsquinaNoroeste()
         {
 
         }
 
-        public void calcularResultado(DataGridView tabla)
+        public double calcularResultado(DataGridView tabla)
         {
             dgvTabla = tabla;
             ofertaTotal = totalOferta().Sum();
             demandaTotal = totalDemanda().Sum();
 
-            filas = tabla.Rows.Count;
-            columnas = tabla.Columns.Count;
+            if (ofertaTotal == demandaTotal)
+            {
+                filas = tabla.Rows.Count;
+                columnas = tabla.Columns.Count;
 
-            MessageBox.Show(filas.ToString());
+                esquinaColumna = 0;
+                esquinaFila = 0;
 
-            //obtengo los datos de la tabla y los ingresos al campo cantidad de los objetos datos
-            obtenerDatosTabla();
+                //obtengo las ofertas y demandas de la tabla de forma indiviual
+                ofertaArray = totalOferta();
+                demandaArray = totalDemanda();
 
+                MessageBox.Show(ofertaArray.Length + "x" + demandaArray.Length);
+
+                //obtengo los datos de la tabla y los ingresos al campo cantidad de los objetos datos
+                obtenerDatosTabla();
+
+                do
+                {
+                    seguir = calcular();
+
+                } while (!seguir);
+
+                resultado = resultadoFinal();
+
+                return resultado;
+
+            } else {
+                MessageBox.Show("La oferta y la demanda no esta balanceadas\nPor lo tanto no se puede realizar la operacion", "Ërror", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
-
-            //if (ofertaTotal == demandaTotal)
-            //{
-            //    do
-            //    {
-            //        seguir = calcular(ofertaActual, demandaActual);
-
-            //    } while (!seguir);
-            //} else
-            //{
-            //    MessageBox.Show("La oferta y la demanda no esta balanceadas\nPor lo tanto no se puede realizar la operacion", "Ërror", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                return 0;
+            }
             
         }
 
-        private bool calcular(double[] oferta, double[] demanda)
+        private bool calcular()
         {
-            ofertaActual = totalOferta();
-            demandaActual = totalDemanda();
-
-            if(esquinaColumna < columnas || esquinaFila < filas)
+            if(esquinaFila < datos.GetLength(0) || esquinaColumna < datos.GetLength(1))
             {
+                double ofertaActual = ofertaArray[esquinaFila];
+                double demandaActual = demandaArray[esquinaColumna];
 
+                if (ofertaActual == demandaActual)
+                {
+                        datos[esquinaFila, esquinaColumna].Precio = demandaActual;
+                        datos[esquinaFila, esquinaColumna].Llena = true;
+                        demandaArray[esquinaColumna] = 0;
+                        ofertaArray[esquinaFila] = 0;
+                        esquinaColumna++;
+                        esquinaFila++;
+                }
+                
+                else if (demandaActual > ofertaActual)
+                {
+                    demandaActual -= ofertaActual;
+                    datos[esquinaFila, esquinaColumna].Precio = demandaActual;
+                    
+                    demandaArray[esquinaColumna] = demandaActual;
+                    ofertaArray[esquinaFila] = 0;
+                    esquinaFila++;
+                }
 
+                else if(ofertaActual > demandaActual)
+                {
+                    ofertaActual -= demandaActual;
+                    datos[esquinaFila, esquinaColumna].Precio = ofertaActual;
+
+                    ofertaArray[esquinaFila] = ofertaActual;
+                    demandaArray[esquinaColumna] = 0;
+                    esquinaColumna++;
+                }
 
                 return false;
             }
@@ -81,15 +119,33 @@ namespace MetodoDeTransporte
             
         }
 
+        private double resultadoFinal()
+        {
+            double totalCosto = 0;
+
+            for(int i = 0; i < datos.GetLength(0); i++)
+            {
+                for (int j = 0; j < datos.GetLength(1); j++)
+                {
+                    if(datos[i, j].Precio>0)
+                    {
+                        totalCosto += (datos[i, j].Cantidad * datos[i, j].Precio); 
+                    }
+                }
+            }
+
+            return totalCosto;
+        }
+
         private double[] totalOferta()
         {
-            double[] oferta = new double[dgvTabla.Rows.Count];
+            double[] oferta = new double[dgvTabla.Rows.Count-2];
 
-            for (int i = 0; i < dgvTabla.Rows.Count; i++)
+            for (int i = 0; i < oferta.Length; i++)
             {
                 if (dgvTabla.Rows[i].Cells[dgvTabla.Columns.Count - 1].Value != null)
                 {
-                   oferta[i] = double.Parse(dgvTabla.Rows[i].Cells[dgvTabla.Columns.Count - 1].Value.ToString());
+                   oferta[i] = Convert.ToDouble(dgvTabla.Rows[i].Cells[dgvTabla.Columns.Count - 1].Value.ToString());
                 }
             }
 
@@ -98,13 +154,13 @@ namespace MetodoDeTransporte
 
         private double[] totalDemanda()
         {
-            double[] demanda = new double[dgvTabla.Columns.Count];
+            double[] demanda = new double[dgvTabla.Columns.Count-2];
 
-            for (int i = 1; i < dgvTabla.Columns.Count; i++)
+            for (int i = 1; i < dgvTabla.Columns.Count-1; i++)
             {
                 if (dgvTabla.Rows[dgvTabla.Rows.Count - 2].Cells[i].Value != null)
                 {
-                    demanda[i - 1] = double.Parse(dgvTabla.Rows[dgvTabla.Rows.Count - 2].Cells[i].Value.ToString());
+                    demanda[i - 1] = Convert.ToDouble(dgvTabla.Rows[dgvTabla.Rows.Count - 2].Cells[i].Value.ToString());
                 }
             }
 
@@ -115,22 +171,19 @@ namespace MetodoDeTransporte
         //el metodo obtiene los datos de la tabla y los ingrese al campo cantidad de los objetos datos
         private void obtenerDatosTabla()
         {
+            datos = new Datos[dgvTabla.Rows.Count-2, dgvTabla.Columns.Count - 2];
+            MessageBox.Show(datos.GetLength(0) + "-"+ datos.GetLength(1));
 
-            datos = new Datos[filas-2, columnas-1];
-            int cont = 0;
-            for(int i = 0; i < filas-2; i++)
+            for(int i = 0; i < datos.GetLength(0); i++)
             {
-                for(int j = 1; j < columnas-1; j++)
+                for(int j = 0; j < datos.GetLength(1); j++)
                 {
-                    if (dgvTabla.Rows[i].Cells[j].Value != null)
-                    {
-                        cont++;
-                        Console.WriteLine(cont);
-                        datos[i, j].Cantidad = int.Parse(dgvTabla.Rows[i].Cells[j].Value.ToString());
-                    }
+
+                    datos[i, j] = new Datos();
+                    datos[i, j].Cantidad = Convert.ToInt32(dgvTabla.Rows[i].Cells[j+1].Value.ToString());
                 }
             }
-
+            MessageBox.Show("Fin");
 
         }
     }
