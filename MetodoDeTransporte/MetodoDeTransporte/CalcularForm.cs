@@ -92,6 +92,8 @@ namespace MetodoDeTransporte
         {
             string tipoMetodo = "";
 
+            Datos.resultadoGlobal = 0;
+
             try
             {
                 tipoMetodo = cbTipoMetodo.SelectedItem.ToString();
@@ -100,16 +102,28 @@ namespace MetodoDeTransporte
                 {
                     case "Esquina Noroeste":
                         Datos.resultadoGlobal = esquinaNoroeste.calcularResultado(dvgTablaDatos);
-                        MessageBox.Show(Datos.resultadoGlobal.ToString());
+
+                        if (Datos.resultadoGlobal > 0)
+                        {
+                            MessageBox.Show("Se ha calculado correctamente la operacion\nIngrese a la pestaña resultados para ver la respuesta", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
                         break;
 
                     case "Costo Minimo":
                         Datos.resultadoGlobal = costoMinimo.calcularResultado(dvgTablaDatos);
-                        MessageBox.Show(Datos.resultadoGlobal.ToString());
+                        if (Datos.resultadoGlobal > 0)
+                        {
+                            MessageBox.Show("Se ha calculado correctamente la operacion\nIngrese a la pestaña resultados para ver la respuesta", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         break;
 
                     case "Vogel":
-                        MessageBox.Show("Vogel");
+                        Datos.resultadoGlobal = costoMinimo.calcularResultado(dvgTablaDatos);
+                        if (Datos.resultadoGlobal > 0)
+                        {
+                            MessageBox.Show("Se ha calculado correctamente la operacion\nIngrese a la pestaña resultados para ver la respuesta", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                         break;
 
                     default:
