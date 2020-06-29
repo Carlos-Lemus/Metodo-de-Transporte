@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
-
 namespace MetodoDeTransporte
 {
     public partial class FormMain : Form
@@ -28,6 +27,9 @@ namespace MetodoDeTransporte
             borderLeftBtn = new Panel();
             borderLeftBtn.Size = new Size(8, 90);
             panelMenu.Controls.Add(borderLeftBtn);
+
+            //agrego el icono de la aplicacion
+            this.Icon = Properties.Resources.icon;
 
         }
 

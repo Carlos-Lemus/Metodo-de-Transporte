@@ -106,16 +106,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\entrega.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\transporte.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\convoy-semi-truck.jpg" />
+    <None Include="Resources\avion.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\avion.png" />
+    <None Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
