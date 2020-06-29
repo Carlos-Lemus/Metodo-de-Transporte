@@ -15,26 +15,26 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_73AC632F277A41E1A38591DDECB89625"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+        "MsmKey" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B1ABE765B0ECD5EB8289AED61AF762F5"
-        "OwnerKey" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+        "OwnerKey" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BE61096451B84CF4A2A9D2DCE0FE3A30"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E40C64FFE35A06FBA8F373D07152E2CB"
-        "OwnerKey" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+        "OwnerKey" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+        "OwnerKey" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -73,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -118,26 +134,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_73AC632F277A41E1A38591DDECB89625"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\icon.ico"
-            "TargetName" = "8:icon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_395E25E203144022B5C71CD2FE5FDED6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B1ABE765B0ECD5EB8289AED61AF762F5"
             {
             "AssemblyRegister" = "3:1"
@@ -167,6 +163,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE61096451B84CF4A2A9D2DCE0FE3A30"
+            {
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Downloads\\icon.ico"
+            "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_395E25E203144022B5C71CD2FE5FDED6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E40C64FFE35A06FBA8F373D07152E2CB"
@@ -377,32 +393,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_29B82A3E9B004746B6FA3D25FA9FE9DC"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_517E81F0A8074B3F9968DF319E1BF6C9"
             {
-            "Name" = "8:ModeloDeTransporte"
+            "Name" = "8:ModeloDeTrasnporte"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+            "Target" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
             "Folder" = "8:_A49CF7EB4CC14F8396ECA128674A4914"
             "WorkingFolder" = "8:_395E25E203144022B5C71CD2FE5FDED6"
-            "Icon" = "8:_73AC632F277A41E1A38591DDECB89625"
+            "Icon" = "8:_BE61096451B84CF4A2A9D2DCE0FE3A30"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_CF7358518DC046DF908D585DF12C6F47"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C1F8D53F39EB4296B76E93A51500EAFE"
             {
-            "Name" = "8:ModeloDeTransporte"
+            "Name" = "8:ModeloDeTrasnporte"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8111A55A5E0F4FE2BE9662351DA659C0"
+            "Target" = "8:_8F8A23264BE1422EB4CAC110EE9C819B"
             "Folder" = "8:_1254C20028EE4AC1849B111E5C9C9B73"
             "WorkingFolder" = "8:_395E25E203144022B5C71CD2FE5FDED6"
-            "Icon" = "8:_73AC632F277A41E1A38591DDECB89625"
+            "Icon" = "8:_BE61096451B84CF4A2A9D2DCE0FE3A30"
             "Feature" = "8:"
             }
         }
@@ -804,9 +820,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8111A55A5E0F4FE2BE9662351DA659C0"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8F8A23264BE1422EB4CAC110EE9C819B"
             {
-            "SourcePath" = "8:..\\MetodoDeTransporte\\obj\\Release\\MetodoDeTransporte.exe"
+            "SourcePath" = "8:..\\MetodoDeTransporte\\obj\\Debug\\MetodoDeTransporte.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_395E25E203144022B5C71CD2FE5FDED6"

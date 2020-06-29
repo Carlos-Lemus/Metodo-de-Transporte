@@ -23,9 +23,9 @@ namespace MetodoDeTransporte
         {
             if(Datos.resultadoGlobal > 0)
             {
-                txtResultado.Text = "La solucion factible es: $" + Datos.resultadoGlobal;
-            } else
-            {
+                txtResultado.Text = "La solucion factible es: \n$" + Datos.resultadoGlobal.ToString();
+            }
+            else {
                 txtResultado.Text = "No se ha realizado ninguna operacion";
             }
         }
