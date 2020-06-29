@@ -105,6 +105,7 @@ namespace MetodoDeTransporte
 
                         if (Datos.resultadoGlobal > 0)
                         {
+                            Datos.TipoMetodo = tipoMetodo;
                             MessageBox.Show("Se ha calculado correctamente la operacion.\nz = " + Datos.resultadoGlobal + " \nIngrese a la pestaña resultados para ver la respuesta.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
@@ -114,6 +115,7 @@ namespace MetodoDeTransporte
                         Datos.resultadoGlobal = costoMinimo.calcularResultado(dvgTablaDatos);
                         if (Datos.resultadoGlobal > 0)
                         {
+                            Datos.TipoMetodo = tipoMetodo;
                             MessageBox.Show("Se ha calculado correctamente la operacion.\nz = " + Datos.resultadoGlobal + " \nIngrese a la pestaña resultados para ver la respuesta.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         break;
@@ -122,6 +124,7 @@ namespace MetodoDeTransporte
                         Datos.resultadoGlobal = costoMinimo.calcularResultado(dvgTablaDatos);
                         if (Datos.resultadoGlobal > 0)
                         {
+                            Datos.TipoMetodo = tipoMetodo;
                             MessageBox.Show("Se ha calculado correctamente la operacion.\nz = " + Datos.resultadoGlobal + " \nIngrese a la pestaña resultados para ver la respuesta.", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         break;

@@ -23,7 +23,7 @@ namespace MetodoDeTransporte
         {
             if(Datos.resultadoGlobal > 0)
             {
-                txtResultado.Text = "La solucion factible es: \n$" + Datos.resultadoGlobal.ToString();
+                txtResultado.Text = "La solucion factible es: \n$" + Datos.resultadoGlobal.ToString() + ", se utilizo el metodo " + Datos.TipoMetodo + " para calcular el costo de transporte.";
             }
             else {
                 txtResultado.Text = "No se ha realizado ninguna operacion";

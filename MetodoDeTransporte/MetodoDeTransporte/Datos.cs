@@ -11,6 +11,7 @@ namespace MetodoDeTransporte
     {
         //variable que tiene el resultado global en la aplicacion
         public static double resultadoGlobal = 0;
+        public static string TipoMetodo = "";
 
         //atributos de la clase
         private double cantidad = 0;
